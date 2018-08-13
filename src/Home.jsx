@@ -34,16 +34,16 @@ class Home extends Component {
               Service & Repair
             </a>
             <a className="p-2 text-muted" href="">
-              Car Prices
+              Repair Prices
             </a>
             <a className="p-2 text-muted" href="">
-              Part & Accessories
+              Diagnostic
             </a>
             <a className="p-2 text-muted" href="">
               Reviews
             </a>
             <a className="p-2 text-muted" href="">
-              My Garage
+              My Car
             </a>
             <a className="p-2 text-muted" href="">
               Contact
