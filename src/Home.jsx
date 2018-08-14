@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import AboutUs from './content/AboutUs'
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
       <div className="container">
        <Header/>
         <Nav/>
+        <AboutUs/>
         <div>
           <Footer/>
         </div>
