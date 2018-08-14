@@ -6,11 +6,13 @@ import Header2 from "./Header2";
 
 import Footer from "./Footer";
 import Nav from "./Nav";
+import AboutUs from './content/AboutUs'
 
 class Home extends Component {
   render() {
     return (
       <div className="container">
+<<<<<<< HEAD
         <Header />
         <Nav />
         <Header2 />
@@ -80,6 +82,11 @@ class Home extends Component {
           </div>
         </section>
 
+=======
+       <Header/>
+        <Nav/>
+        <AboutUs/>
+>>>>>>> e0f9e3aa46f7d25df3b3ffa986a2197b375038ac
         <div>
           <Footer />
         </div>
