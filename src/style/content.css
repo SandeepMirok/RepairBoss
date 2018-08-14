@@ -5,6 +5,7 @@
 h3.title {
 
     /*font-size: 3em;*/
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -14,9 +15,12 @@ h3.title {
     margin: 0 0 .5em;
     line-height: 1.6em;
 }
+.about h4{
+    font-size: 1.1em;
+}
 .about p {
     color: #555;
-    font-size: 1.1em;
+
     line-height: 2em;
 }
 .about-left  img {
