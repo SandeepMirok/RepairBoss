@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Home.css";
+import "./style/Home.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 class Nav extends Component{
