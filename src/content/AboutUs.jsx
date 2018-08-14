@@ -33,7 +33,7 @@ class AboutUs extends Component {
             </p>
           </div>
           <div className="clearfix">
-            <img src={Ace} class="img-thumbnail" alt="Cinque Terre" />
+            <img src={Ace} className="img-thumbnail" alt="Cinque Terre" />
           </div>
         </div>
       </div>
