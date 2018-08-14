@@ -25,7 +25,6 @@ class Home extends Component {
             </div>
           </div>
         </header>
-
         <div className="nav-scroller py-1 mb-2">
           <nav className="nav ">
             <a className="p-2 text-muted flex-auto " href="">
