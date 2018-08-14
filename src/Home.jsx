@@ -21,7 +21,7 @@ class Home extends Component {
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center">
               <a className="btn btn-sm btn-outline-secondary" href="">
-                Sign up
+                Login
               </a>
             </div>
           </div>
