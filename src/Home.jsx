@@ -4,12 +4,13 @@ import "./Home.css";
 class Home extends Component {
   render() {
     return (
+
       <div className="container">
         <header className="blog-header py-3">
           <div className="row flex-nowrap justify-content-between align-items-center">
             <div className="col-4 pt-1">
               <a className="text-muted" href="">
-                Subscribe
+                Subscribe My channel
               </a>
             </div>
             <div className="col-4 text-center">
