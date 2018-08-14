@@ -13,7 +13,7 @@ h3.title {
     /*font-size: 1.3em;*/
     color: #000;
     margin: 0 0 .5em;
-    line-height: 1.6em;
+    line-height: 1.4em;
 }
 .about h4{
     font-size: 1.1em;
@@ -21,7 +21,7 @@ h3.title {
 .about p {
     color: #555;
 
-    line-height: 2em;
+    line-height: 1.5em;
 }
 .about-left  img {
     width: 100%;
