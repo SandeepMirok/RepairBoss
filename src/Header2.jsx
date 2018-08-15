@@ -8,7 +8,7 @@ class Header extends Component {
       <header className="bg-primary text-white">
         <div className="container text-center">
           <h1>Welcome to Scrolling Nav</h1>
-          <p class="lead">
+          <p className="lead">
             A landing page template freshly redesigned for Bootstrap 4
           </p>
         </div>
