@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/Home.css";
 import "../style/content.css";
-import Ace from "../img/Ace.jpg";
+//import Ace from "../img/Ace.jpg";
+import Car1962 from "../img/1962car.jpg";
+import Ford from "../img/Ford.jpg";
+import Cuban from "../img/Cuban.png";
 
 class AboutUs extends Component {
   render() {
@@ -32,8 +35,70 @@ class AboutUs extends Component {
               'lorem ipsum' will uncover many web sites still in their infancy.{" "}
             </p>
           </div>
-          <div className="clearfix">
-            <img src={Ace} className="img-thumbnail" alt="Cinque Terre" />
+          <div className="row">
+            <div className="col-lg-4">
+              <img
+                src={Cuban}
+                className="rounded-circle"
+                alt="Cinque Terre"
+                width="140"
+                height="140"
+              />
+              <h2>Heading</h2>
+              <p>
+                Donec sed odio dui. Etiam porta sem malesuada magna mollis
+                euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                Praesent commodo cursus magna.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="" role="button">
+                  View details »
+                </a>
+              </p>
+            </div>
+            <div className="col-lg-4">
+              <img
+                src={Car1962}
+                className="rounded-circle"
+                alt="Cinque Terre"
+                width="140"
+                height="140"
+              />
+              <h2>Heading</h2>
+              <p>
+                Donec sed odio dui. Etiam porta sem malesuada magna mollis
+                euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                Praesent commodo cursus magna.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="" role="button">
+                  View details »
+                </a>
+              </p>
+            </div>
+            <div className="col-lg-4">
+              <img
+                src={Ford}
+                className="rounded-circle"
+                alt="Cinque Terre"
+                width="140"
+                height="140"
+              />
+              <h2>Heading</h2>
+              <p>
+                Donec sed odio dui. Etiam porta sem malesuada magna mollis
+                euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                Praesent commodo cursus magna.
+              </p>
+              <p>
+                <a className="btn btn-secondary" href="" role="button">
+                  View details »
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
