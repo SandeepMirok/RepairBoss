@@ -1,0 +1,12 @@
+.span4 img {
+  margin-right: 10px;
+}
+img.w-25.p-3 {
+  float: left;
+}
+.span4 .img-right {
+  float: right;
+}
+div#findus {
+  padding: 30px;
+}
