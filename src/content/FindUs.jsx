@@ -13,7 +13,7 @@ class AboutUs extends Component {
       <div className="findus" id="findus">
         <div className="row">
           <div className="span4">
-            <img src={Map} className="w-25 p-3" alt="Map" />
+            <img src={Map} className="w-50 p-3" alt="Map" />
             <div className="content-heading">
               <h3>Experience &nbsp </h3>
             </div>
