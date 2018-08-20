@@ -1,12 +1,12 @@
 import React from "react";
-import "./signup.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "../style/signup.css";
 
 class signup extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="containerSing">
           <form>
             <div className="row">
               <div className="form-header col col-sm-12">
@@ -75,32 +75,41 @@ class signup extends React.Component {
 
             <div className="row">
               <div className="sd">
-              <div className="role-label ">
-                <label>Are you:</label>
-              </div>
+                <div className="role-label ">
+                  <label>Are you:</label>
+                </div>
 
-
-                  <div className="role  options radio-inline">
-                  <input className="with-gap" name="user-type" type="radio" id="user" defaultChecked />
+                <div className="role  options radio-inline">
+                  <input
+                    className="with-gap"
+                    name="user-type"
+                    type="radio"
+                    id="user"
+                    defaultChecked
+                  />
                   <span className="radio-label">User</span>
-                  </div>
+                </div>
 
-
-
-
-                  <div className="role   options optionss radio-inline">
-                  <input className="with-gap" name="user-type" type="radio" id="mechanic"/>
+                <div className="role   options optionss radio-inline">
+                  <input
+                    className="with-gap"
+                    name="user-type"
+                    type="radio"
+                    id="mechanic"
+                  />
                   <span className="radio-label">Mechanic</span>
-                  </div>
+                </div>
 
-
-
-                  <div className="role   options optionss radio-inline">
-                  <input className="with-gap" name="user-type" type="radio" id="insurance"/>
+                <div className="role   options optionss radio-inline">
+                  <input
+                    className="with-gap"
+                    name="user-type"
+                    type="radio"
+                    id="insurance"
+                  />
                   <span className="radio-label">Insurance</span>
-                  </div>
-                  </div>
-
+                </div>
+              </div>
             </div>
           </form>
         </div>

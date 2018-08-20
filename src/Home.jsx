@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./style/Home.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "./style/Home.css";
+
 import Header from "./Header";
 import Header2 from "./Header2";
 import Footer from "./Footer";

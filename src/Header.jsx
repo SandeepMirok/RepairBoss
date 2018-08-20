@@ -19,7 +19,7 @@ class Header extends Component {
               </a>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center">
-              <a className="btn btn-sm btn-outline-secondary" href="#/App">
+              <a className="btn btn-sm btn-outline-secondary" href="#/SignUp">
                 Login
               </a>
             </div>

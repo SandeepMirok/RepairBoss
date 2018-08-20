@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 //import Home from "./Home";
-import SignUp from "./signup.js";
+import FirstPage from "./FirstPage";
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
+//import "./index.css";
 
-ReactDOM.render(<SignUp />, document.getElementById("root"));
+ReactDOM.render(<FirstPage />, document.getElementById("root"));
 registerServiceWorker();

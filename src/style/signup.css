@@ -1,0 +1,114 @@
+.containerSing {
+  background-color: white;
+  padding: 20px 25px;
+  border: 5px solid #26a69a;
+  max-width: 550px;
+  height: auto;
+  position: relative;
+  top: 30px;
+}
+
+.form-header {
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.input-fieldSing {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+}
+
+label {
+  order: -1;
+  transition: all 0.3s ease-in;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+
+input[type="text"] {
+  outline: none;
+}
+input[type="email"] {
+  outline: none;
+}
+input[type="password"] {
+  outline: none;
+}
+
+input[type="text"]:valid,
+input[type="text"]:focus.valid,
+input[type="password"]:valid,
+input[type="password"]:focus.valid,
+input[type="email"]:valid,
+input[type="email"]:focus.valid {
+  border-bottom: 1px solid #4caf50;
+  box-shadow: 0 1px 0 0 #4caf50;
+}
+
+.input-border {
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: grey;
+}
+
+.role-label {
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.sd {
+  display: inline-flex;
+  margin-left: 5%;
+}
+.options {
+  margin-top: 8px;
+  margin-left: 5%;
+}
+
+@media only screen and (max-width: 495px) {
+  .optionss {
+    margin-top: 8px;
+    margin-left: -5%;
+  }
+}
+
+.radio-label {
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+  margin-left: 3px;
+}
+
+.btn-register {
+  background-color: #26a69a;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-register:hover {
+  color: white;
+  background: #33ccbd;
+  transition: 300ms ease-in;
+}
+
+.btn-register:focus {
+  outline: none;
+}
+
+.new-login {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
