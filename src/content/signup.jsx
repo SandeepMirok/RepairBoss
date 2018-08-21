@@ -5,8 +5,8 @@ import "../style/signup.css";
 class signup extends React.Component {
   render() {
     return (
-      <div>
-        <div className="containerSing">
+      <div className="back">
+        <div className="containerLog">
           <form>
             <div className="row">
               <div className="form-header col col-sm-12">
@@ -32,7 +32,7 @@ class signup extends React.Component {
                   type="text"
                   required
                 />
-                <label htmlFor="first_name">Last Name</label>
+                <label htmlFor="last_name">Last Name</label>
               </div>
             </div>
 
@@ -73,42 +73,58 @@ class signup extends React.Component {
               </div>
             </div>
 
+            <div className="row radio-group">
+              <div className="role-label">
+                <span>Select your role:</span>
+              </div>
+
+              <div className="options">
+                <input name="user-type" type="radio" id="user" defaultChecked />
+                <span className="radio-label">User</span>
+              </div>
+
+              <div className="options">
+                <input name="user-type" type="radio" id="mechanic" />
+                <span className="radio-label">Mechanic</span>
+              </div>
+
+              <div className="options">
+                <input name="user-type" type="radio" id="insurance" />
+                <span className="radio-label">Insurance</span>
+              </div>
+            </div>
+
             <div className="row">
-              <div className="sd">
-                <div className="role-label ">
-                  <label>Are you:</label>
-                </div>
+              <div className="input-field col-sm-6">
+                <input
+                  id="shop_name"
+                  className="input-border"
+                  type="text"
+                  required
+                />
+                <label htmlFor="shop_name">Shop Name</label>
+              </div>
 
-                <div className="role  options radio-inline">
-                  <input
-                    className="with-gap"
-                    name="user-type"
-                    type="radio"
-                    id="user"
-                    defaultChecked
-                  />
-                  <span className="radio-label">User</span>
-                </div>
+              <div className="input-field col-sm-6">
+                <input
+                  id="phone_number"
+                  className="input-border"
+                  type="text"
+                  required
+                />
+                <label htmlFor="phone_number">Shop Name</label>
+              </div>
+            </div>
 
-                <div className="role   options optionss radio-inline">
-                  <input
-                    className="with-gap"
-                    name="user-type"
-                    type="radio"
-                    id="mechanic"
-                  />
-                  <span className="radio-label">Mechanic</span>
-                </div>
-
-                <div className="role   options optionss radio-inline">
-                  <input
-                    className="with-gap"
-                    name="user-type"
-                    type="radio"
-                    id="insurance"
-                  />
-                  <span className="radio-label">Insurance</span>
-                </div>
+            <div className="row">
+              <div className="input-field col-sm-6 offset-sm-3">
+                <button
+                  className="btn btn-register"
+                  type="submit"
+                  name="action"
+                >
+                  REGISTER
+                </button>
               </div>
             </div>
           </form>

@@ -1,11 +1,19 @@
-.containerSing {
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro");
+
+.back {
+  height: 100vh;
+  background: url("../img/carrepair.jpg") no-repeat center center fixed;
+  background-repeat: no-repeat;
+}
+
+.containerLog {
   background-color: white;
   padding: 20px 25px;
   border: 5px solid #26a69a;
   max-width: 550px;
   height: auto;
   position: relative;
-  top: 30px;
+  top: 10px;
 }
 
 .form-header {
@@ -17,7 +25,7 @@
   padding-bottom: 5px;
 }
 
-.input-fieldSing {
+.input-field {
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -64,26 +72,29 @@ input[type="email"]:focus.valid {
   font-family: "Maven Pro", sans-serif;
 }
 
-.sd {
-  display: inline-flex;
-  margin-left: 5%;
-}
 .options {
-  margin-top: 8px;
   margin-left: 5%;
 }
 
-@media only screen and (max-width: 495px) {
-  .optionss {
-    margin-top: 8px;
-    margin-left: -5%;
+@media only screen and (max-width: 442px) {
+  .options {
+    margin-left: 1%;
   }
 }
 
+input[type="radio"] {
+  height: 14px;
+  width: 14px;
+}
 .radio-label {
   color: black;
   font-family: "Maven Pro", sans-serif;
   margin-left: 3px;
+}
+
+.radio-group {
+  margin-left: auto;
+  margin-top: auto;
 }
 
 .btn-register {

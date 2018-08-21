@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import "./style/Home.css";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import Home from "./Home";
-import SignUp from "./content/signup";
+import SignUp from "./content/SignUp";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 class FirstPage extends Component {
   render() {
