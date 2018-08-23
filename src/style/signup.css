@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro");
 
 .back {
-  height: 100vh;
+  height: auto;
+  padding: 6.7vh 2vh 6.7vh 2vh;
+
   background: url("../img/carrepair.jpg") no-repeat center center fixed;
-  background-repeat: no-repeat;
 }
 
 .containerSig {
@@ -13,7 +14,6 @@
   max-width: 550px;
   height: auto;
   position: relative;
-  top: 10px;
   margin: auto;
 }
 
@@ -33,6 +33,7 @@
   flex-direction: column;
   color: black;
   font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
 }
 
 label {
@@ -51,16 +52,22 @@ input[type="email"] {
 input[type="password"] {
   outline: none;
 }
-
-input[type="text"]:valid,
-input[type="text"]:focus.valid,
-input[type="password"]:valid,
-input[type="password"]:focus.valid,
-input[type="email"]:valid,
-input[type="email"]:focus.valid {
-  border-bottom: 1px solid #4caf50;
-  box-shadow: 0 1px 0 0 #4caf50;
+input[type="tel"] {
+  outline: none;
 }
+
+/*input[type=tel]:valid,
+input[type=tel]:focus:valid,
+input[type=text]:valid,
+input[type=text]:focus.valid,
+input[type=password]:valid,
+input[type=password]:focus.valid,
+input[type=email]:valid,
+input[type=email]:focus.valid
+{
+	border-bottom: 1px solid #4CAF50;
+    box-shadow: 0 1px 0 0 #4CAF50;
+}*/
 
 .input-border {
   border: none;
@@ -77,7 +84,7 @@ input[type="email"]:focus.valid {
   margin-left: 5%;
 }
 
-@media only screen and (max-width: 442px) {
+@media only screen and (max-width: 467px) {
   .options {
     margin-left: 1%;
   }
@@ -91,11 +98,19 @@ input[type="radio"] {
   color: black;
   font-family: "Maven Pro", sans-serif;
   margin-left: 3px;
+  font-weight: bold;
+}
+
+.span-role {
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
 }
 
 .radio-group {
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 6px;
+  margin-bottom: 5px;
 }
 
 .btn-register {
@@ -123,4 +138,19 @@ input[type="radio"] {
   color: black;
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
+}
+
+#company_group {
+  margin-top: -3vh;
+}
+
+@media only screen and (max-width: 575px) {
+  #company_group {
+    margin-top: -7vh;
+  }
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
