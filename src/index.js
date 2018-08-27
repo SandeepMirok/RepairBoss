@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Home from "./Home";
 import App from "./App";
 import SignUp from "./content/SignUp";
+import Diagnostic from "./content/Diagnostic";
 
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
@@ -22,11 +23,15 @@ ReactDOM.render(
       <li>
         <NavLink to="/SignUp">Login</NavLink>
       </li>
+      <li>
+        <NavLink to="/Diagnostic">Diagnostic</NavLink>
+      </li>
 
       <Route path="/" exact={true} component={Home} />
       <Route path="/Home" exact={true} component={Home} />
       <Route path="/App" component={App} />
       <Route path="/SignUp" component={SignUp} />
+      <Route path="/Diagnostic" component={Diagnostic} />
     </div>
   </HashRouter>,
   document.getElementById("root")
