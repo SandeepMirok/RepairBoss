@@ -5,10 +5,10 @@ import Header from "./Header";
 import Header2 from "./Header2";
 import Footer from "./Footer";
 import Nav from "./Nav";
-import AboutUs from "./content/AboutUs";
+import AboutUs from "./components/AboutUs";
 import WOW from "wowjs";
-import ServicePart from "./content/Service";
-import FindUs from "./content/FindUs";
+import ServicePart from "./components/Service";
+import FindUs from "./components/FindUs";
 
 class Home extends Component {
   componentDidMount() {

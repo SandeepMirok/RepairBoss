@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./Home";
 import App from "./App";
-import SignUp from "./content/SignUp";
-import Diagnostic from "./content/Diagnostic";
+import SignUp from "./components/SignUp";
+import Diagnostic from "./components/Diagnostic";
 
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
