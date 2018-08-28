@@ -146,7 +146,7 @@ h6 {
   font-size: 0.875rem;
 }
 @media (max-width: 768px) {
-  .nav{
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -154,7 +154,6 @@ h6 {
     flex-wrap: wrap;
     flex-direction: column;
     flex-grow: 1;
-
   }
 }
 .card-img-right {
@@ -242,4 +241,13 @@ h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+p.card-text {
+  font-family: Trebuchet MS;
+}
+button.btn.btn-sm.btn-outline-secondary {
+  font-family: Trebuchet MS;
+}
+.viewButton:hover {
+  background-color: #1e90ff !important  ;
 }

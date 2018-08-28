@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs";
 import WOW from "wowjs";
 import ServicePart from "./components/Service";
 import FindUs from "./components/FindUs";
+import Heading from "./components/Heading";
 
 class Home extends Component {
   componentDidMount() {
@@ -16,11 +17,12 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container-Home">
         <Header />
         <Nav />
         <Header2 />
         <AboutUs />
+        <Heading />
         <ServicePart />
         <FindUs />
         <div>
