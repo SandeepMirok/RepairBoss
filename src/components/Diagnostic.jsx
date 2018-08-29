@@ -24,7 +24,7 @@ class Diagnostic extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-D">
         <Header />
         <Nav />
         <h1>Diagnostic Page</h1>
