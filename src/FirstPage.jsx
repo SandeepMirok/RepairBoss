@@ -19,9 +19,6 @@ class FirstPage extends Component {
           <li>
             <NavLink to="/SignUp">Login</NavLink>
           </li>
-          <li>
-            <NavLink to="/SignUp">Login</NavLink>
-          </li>
           <Route path="/" exact={true} component={Home} />
           <Route path="/Home" exact={true} component={Home} />
           <Route path="/App" component={App} />
