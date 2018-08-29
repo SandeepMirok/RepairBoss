@@ -27,6 +27,40 @@ class Diagnostic extends Component {
       <div className="container-D">
         <Header />
         <Nav />
+        <form>
+          <div class="form-group col-md-4">
+            <label for="inputState">Brand</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="inputState">Model</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="inputState">Year</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">
+                Find
+              </button>
+            </div>
+          </div>
+        </form>
+
         <h1>Diagnostic Page</h1>
         <form>
           <input

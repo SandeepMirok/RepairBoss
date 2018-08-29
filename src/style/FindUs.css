@@ -8,5 +8,9 @@ img.w-50.p-3 {
   float: right;
 }
 div#findus {
-  padding: 30px;
+  padding: 50px;
+}
+.size {
+  width: 25%;
+  height: 100%;
 }

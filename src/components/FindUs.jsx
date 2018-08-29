@@ -5,15 +5,15 @@ import "../style/content.css";
 import "../style/FindUs.css";
 //import Ace from "../img/Ace.jpg";
 
-import Map from "../img/Map.svg";
+import Map from "../img/OntarioMap.jpg";
 
 class AboutUs extends Component {
   render() {
     return (
       <div className="findus" id="findus">
-        <div className="row">
+        <div className="container">
           <div className="span4">
-            <img src={Map} className="w-50 p-3" alt="Map" />
+            <img src={Map} className="rounded float-left size" alt="Map" />
             <div className="content-heading">
               <h3>Experience &nbsp </h3>
             </div>
