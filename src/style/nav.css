@@ -1,0 +1,35 @@
+img {
+  width: 4%;
+  height: 4%;
+}
+.nav-margin {
+  margin-left: 9%;
+  margin-right: 9%;
+  height: 5%;
+  background-color: burlywood;
+
+  position: fixed-bottom;
+}
+nav {
+  height: 200px;
+}
+.p-2,
+.flex-auto {
+  color: black;
+}
+a:hover {
+  color: #1e90ff;
+  text-decoration: none;
+}
+.bg-dark {
+  background-color: transparent;
+}
+
+.positionFixed {
+  overflow: hidden;
+  z-index: 3;
+
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}

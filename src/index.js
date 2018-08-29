@@ -13,6 +13,7 @@ import { Route, HashRouter, NavLink } from "react-router-dom";
 ReactDOM.render(
   <HashRouter>
     <div>
+      {/*
       <li>
         {""}
         <NavLink to="/Home">Home</NavLink>
@@ -26,7 +27,7 @@ ReactDOM.render(
       <li>
         <NavLink to="/Diagnostic">Diagnostic</NavLink>
       </li>
-
+      */}
       <Route path="/" exact={true} component={Home} />
       <Route path="/Home" exact={true} component={Home} />
       <Route path="/App" component={App} />

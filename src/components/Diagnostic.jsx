@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import PropTypes from "prop-types";
 
-import Header from "../Header";
+//import Header from "../Header";
 import Nav from "../Nav";
 import Footer from "../Footer";
 import Search from "./Search";
@@ -25,7 +25,6 @@ class Diagnostic extends Component {
   render() {
     return (
       <div className="container-D">
-        <Header />
         <Nav />
         <h1>Diagnostic Page</h1>
         <form>
