@@ -38,25 +38,15 @@ class Nav extends Component {
           <a className=" m-3 mt-5 flex-auto" href="">
             My Car
           </a>
-          <a className=" m-3 mt-5 flex-auto" href="">
+          <a className="  flex-auto" href="#/ContactUs">
             Contact
           </a>
-          <li className="dropdown m-3 mt-5 flex-auto">
-            <a className="dropdown-toggle" data-toggle="dropdown" href="">
-              Dropdown
-            </a>
-            <div className="dropdown-menu m-3">
-              <a className="dropdown-item" href="">
-                Link 1
-              </a>
-              <a className="dropdown-item" href="">
-                Link 2
-              </a>
-              <a className="dropdown-item" href="">
-                Link 3
-              </a>
-            </div>
-          </li>
+          <a className="flex-auto-login" href="#/SignUp">
+            <span className="fa fa-user-o" /> Sign Up
+          </a>
+          <a className="flex-auto-login" href="">
+            <span className="fa fa-sign-in" /> Login
+          </a>
         </nav>
       </div>
     );

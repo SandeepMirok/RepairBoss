@@ -24,52 +24,54 @@ class Diagnostic extends Component {
 
   render() {
     return (
-      <div className="container-D">
+      <div className="space">
         <Nav />
-        <form>
-          <div class="form-group col-md-4">
-            <label for="inputState">Brand</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-
-          <div class="form-group col-md-4">
-            <label for="inputState">Model</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-
-          <div class="form-group col-md-4">
-            <label for="inputState">Year</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-
-          <div class="form-group row">
-            <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">
-                Find
-              </button>
+        <div className="container">
+          <form>
+            <div class="form-group col-md-4">
+              <label for="inputState">Brand</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
             </div>
-          </div>
-        </form>
 
-        <h1>Diagnostic Page</h1>
-        <form>
-          <input
-            placeholder="Search for..."
-            ref={input => (this.search = input)}
-            onChange={this.handleInputChange}
-          />
-          <p>{this.state.query}</p>
-        </form>
-        <Search />
+            <div class="form-group col-md-4">
+              <label for="inputState">Model</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="inputState">Year</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">
+                  Find
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <h1>Diagnostic Page</h1>
+          <form>
+            <input
+              placeholder="Search for..."
+              ref={input => (this.search = input)}
+              onChange={this.handleInputChange}
+            />
+            <p>{this.state.query}</p>
+          </form>
+          <Search />
+        </div>
         <Footer />
       </div>
     );

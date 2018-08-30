@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import "./style/HeaderVedio.css";
 import "bootstrap/dist/css/bootstrap.css";
 import car from "./img/Mercedes.mp4";
+<<<<<<< HEAD
 //import Nav from "./Nav";
+=======
+>>>>>>> refs/remotes/origin/master
 class HeaderVedio extends Component {
   constructor(props) {
     super(props);
@@ -13,15 +16,15 @@ class HeaderVedio extends Component {
   }
   render() {
     return (
-      <header className="text-white container-fluid">
+      <header className="text-white container-fluid video">
         <div className="overlay" />
         <div className="vedio">
           <video
-            playsinline="playsinline"
-            autoplay="autoplay"
+            playsInline="playsinline"
+            autoPlay="autoplay"
             muted="muted"
             loop="loop"
-            overlay
+            overlay="true"
           >
             <source src={this.state.videoURL} type="video/mp4" />
           </video>
