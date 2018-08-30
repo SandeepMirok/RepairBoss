@@ -5,39 +5,47 @@ import logo from "./img/logo.jpg";
 class Nav extends Component {
   render() {
     return (
-      <div
-        className="nav-scroller py-1 mb-2 positionFixed"
-        id="collapsibleNavbar"
-      >
-        <nav className="nav nav-margin">
-          <img src={logo} alt="Logo" />
+      <div>
+        <nav className="nav nav-margin fixed-top justify-content-center">
+          <img src={logo} className="flex-auto  m-3 mt-5" alt="Logo" />
+          {/*
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon" />
+          </button>
 
-          <a className="  flex-auto " href="">
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          */}
+          <a className="  m-3 mt-5 flex-auto " href="">
             Home
           </a>
-          <a className="  flex-auto" href="">
+          <a className=" m-3 mt-5 flex-auto" href="">
             Service & Repair
           </a>
-          <a className="  flex-auto" href="">
+          <a className=" m-3 mt-5 flex-auto" href="">
             Repair Prices
           </a>
-          <a className="  flex-auto" href="#/Diagnostic">
+          <a className=" m-3  mt-5 flex-auto" href="#/Diagnostic">
             Diagnostic
           </a>
-          <a className="  flex-auto" href="">
+          <a className=" m-3 mt-5 flex-auto" href="">
             Reviews
           </a>
-          <a className="  flex-auto" href="">
+          <a className=" m-3 mt-5 flex-auto" href="">
             My Car
           </a>
-          <a className="  flex-auto" href="">
+          <a className=" m-3 mt-5 flex-auto" href="">
             Contact
           </a>
-          <li className="dropdown">
+          <li className="dropdown m-3 mt-5 flex-auto">
             <a className="dropdown-toggle" data-toggle="dropdown" href="">
               Dropdown
             </a>
-            <div className="dropdown-menu">
+            <div className="dropdown-menu m-3">
               <a className="dropdown-item" href="">
                 Link 1
               </a>
