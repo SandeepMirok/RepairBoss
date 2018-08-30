@@ -1,21 +1,24 @@
 img {
-  width: 4%;
-  height: 4%;
+  width: 8%;
+  height: 9%;
 }
 .nav-margin {
   margin-left: 9%;
   margin-right: 9%;
   height: 5%;
-  background-color: burlywood;
+  background-color: white;
 
   position: fixed-bottom;
 }
 nav {
-  height: 200px;
+  height: 300px;
 }
 .p-2,
 .flex-auto {
   color: black;
+  margin-top: 1.5%;
+
+  margin-left: 10px;
 }
 a:hover {
   color: #1e90ff;
@@ -32,4 +35,22 @@ a:hover {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
+}
+div#collapsibleNavbar {
+  background-color: white;
+}
+
+.navbar-btn {
+  margin-top: 1%;
+  width: 7%;
+  height: 7%;
+}
+.flex-auto-login {
+  margin-top: 1.5%;
+
+  margin-left: 10px;
+  color: #1e90ff !important;
+}
+.flex-auto-login:hover {
+  color: #0000ff !important;
 }

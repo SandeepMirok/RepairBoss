@@ -4,6 +4,7 @@ import Home from "./Home";
 import App from "./App";
 import SignUp from "./components/SignUp";
 import Diagnostic from "./components/Diagnostic";
+import ContactUs from "./components/ContactUs";
 
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
@@ -33,6 +34,7 @@ ReactDOM.render(
       <Route path="/App" component={App} />
       <Route path="/SignUp" component={SignUp} />
       <Route path="/Diagnostic" component={Diagnostic} />
+      <Route path="/ContactUs" component={ContactUs} />
     </div>
   </HashRouter>,
   document.getElementById("root")
