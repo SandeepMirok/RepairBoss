@@ -7,7 +7,7 @@ header {
   width: 100%;
   overflow: hidden;
   padding-top: 9%;
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
 
 header video {
@@ -37,7 +37,7 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: transparent;
   opacity: 0.5;
   z-index: 1;
 }

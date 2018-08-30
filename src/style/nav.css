@@ -1,11 +1,11 @@
 img {
   width: 8%;
-  height: 9%;
+  height: 5%;
 }
 .nav-margin {
   margin-left: 9%;
-  margin-right: 9%;
-  height: 5%;
+  margin-right: 2%;
+  height: 0%;
   background-color: white;
 
   position: fixed-bottom;
@@ -53,4 +53,8 @@ div#collapsibleNavbar {
 }
 .flex-auto-login:hover {
   color: #0000ff !important;
+}
+.cl {
+  background-color: #1e90ff;
+  color: #1e90ff;
 }

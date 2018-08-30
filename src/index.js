@@ -9,7 +9,7 @@ import ContactUs from "./components/ContactUs";
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style/index.css";
-import { Route, HashRouter, NavLink } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <HashRouter>

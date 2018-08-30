@@ -11,6 +11,7 @@ import ServicePart from "./components/Service";
 import FindUs from "./components/FindUs";
 import Heading from "./components/Heading";
 import HeaderVedio from "./HeaderVedio";
+//import Tester from "./Tester";
 
 class Home extends Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class Home extends Component {
         <Heading />
         <ServicePart />
         <FindUs />
+
         <div>
           <Footer />
         </div>
