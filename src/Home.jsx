@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./style/Home.css";
-import "./style/nav.css";
-//import logo from "./img/logo.jpg";
 import "bootstrap/dist/css/bootstrap.css";
 //import Header from "./Header";
 
@@ -20,13 +18,9 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container-Home">
         <Nav />
-        <br />
-        <br />
-        <br />
         <HeaderVedio />
-
         <AboutUs />
         <Heading />
         <ServicePart />

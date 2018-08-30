@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import "./style/HeaderVedio.css";
 import "bootstrap/dist/css/bootstrap.css";
 import car from "./img/Mercedes.mp4";
-<<<<<<< HEAD
 //import Nav from "./Nav";
-=======
->>>>>>> refs/remotes/origin/master
 class HeaderVedio extends Component {
   constructor(props) {
     super(props);

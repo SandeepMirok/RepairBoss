@@ -5,37 +5,29 @@ import logo from "./img/logo.jpg";
 class Nav extends Component {
   render() {
     return (
-      <div>
-        <nav className="nav nav-margin fixed-top justify-content-center">
-          <img src={logo} className="flex-auto  m-3 mt-5" alt="Logo" />
-          {/*
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapsibleNavbar"
-          >
-            <span class="navbar-toggler-icon" />
-          </button>
+      <div
+        className="nav-scroller py-1 mb-2 positionFixed"
+        id="collapsibleNavbar"
+      >
+        <nav className="nav nav-margin">
+          <img src={logo} alt="Logo" />
 
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          */}
-          <a className="  m-3 mt-5 flex-auto " href="">
+          <a className="  flex-auto " href="">
             Home
           </a>
-          <a className=" m-3 mt-5 flex-auto" href="">
+          <a className="  flex-auto" href="">
             Service & Repair
           </a>
-          <a className=" m-3 mt-5 flex-auto" href="">
+          <a className="  flex-auto" href="">
             Repair Prices
           </a>
-          <a className=" m-3  mt-5 flex-auto" href="#/Diagnostic">
+          <a className="  flex-auto" href="#/Diagnostic">
             Diagnostic
           </a>
-          <a className=" m-3 mt-5 flex-auto" href="">
+          <a className="  flex-auto" href="">
             Reviews
           </a>
-          <a className=" m-3 mt-5 flex-auto" href="">
+          <a className="  flex-auto" href="">
             My Car
           </a>
           <a className="  flex-auto" href="#/ContactUs">
