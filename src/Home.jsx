@@ -26,7 +26,6 @@ class Home extends Component {
         <Heading />
         <ServicePart />
         <FindUs />
-
         <div>
           <Footer />
         </div>
