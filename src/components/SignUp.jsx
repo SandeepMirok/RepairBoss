@@ -106,7 +106,7 @@ class signup extends React.Component {
   render() {
     return (
       <div className="back img-responsive">
-        <div className="containerSig">
+        <div className="container signupContainer">
           <form>
             <div className="row">
               <div className="form-header col col-sm-12">
