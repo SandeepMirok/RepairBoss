@@ -1,0 +1,43 @@
+#myModal
+{
+border-top-style: solid;
+border-top-color: #1E90FF;
+border-width:6px;
+}
+
+.form-header {
+  color: black;
+  font-family: Trebuchet MS;
+  font-size: 25px;
+  font-weight: bold;
+  color:#1E90FF;
+}
+
+.popupText {
+  color: black;
+  font-family: Trebuchet MS;
+  font-size: 18px;
+}
+
+.close:focus,.close:active {
+   outline: none;
+   box-shadow: none;
+}
+
+.forgotPassword
+{
+  font-family: Trebuchet MS;
+  font-size: 15px;
+  font-weight: bold;
+  color:#1E90FF;
+}
+
+.loginText
+{
+  font-family: Trebuchet MS;
+}
+
+.hide
+{
+  visibility: hidden;
+}
