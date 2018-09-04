@@ -5,6 +5,7 @@
   min-height:100vh;
   padding: 4vh 2vh 0vh 2vh;
   background: url("../img/carrepair.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .signupContainer {
@@ -14,6 +15,7 @@
   max-width: 550px;
   height: auto;
   position: relative;
+
 }
 
 .form-header {
