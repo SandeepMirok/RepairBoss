@@ -1,0 +1,38 @@
+.socialMedia
+{
+  background-color: #1E90FF;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: Trebuchet MS;
+  color: white;
+}
+
+.deep-blue
+{
+background-color: #1E90FF;
+width: 60px;
+}
+
+footer
+{
+  background-color: #f4f4f4;
+}
+
+.companyName
+{
+  font-weight: bold;
+}
+a
+{
+color: black;
+}
+a:hover
+{
+color:  #1E90FF;
+text-decoration: none;
+}
+
+.address
+{
+  margin-left: 38px;
+}
