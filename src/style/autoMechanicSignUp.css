@@ -1,0 +1,127 @@
+.back {
+  height:auto ;
+  min-height:100vh;
+  padding: 4vh 2vh 4vh 2vh;
+  background: url("../img/carrepair.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.tagline
+{
+  color: white;
+  font-size: bold;
+  font-family: Trebuchet MS;
+  margin-top: 15px;
+  position: absolute;
+  max-width: 500px;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .tagline
+  {
+    display: none;
+  }
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+.autoMechanicContainer {
+  background-color: white;
+  padding: 20px 25px;
+  border: 5px solid #1E90FF;
+  max-width: 600px;
+  height: auto;
+  margin-right: 6vh;
+  position:relative;
+}
+
+.form-header {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+
+}
+
+.input-field {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-family: Trebuchet MS;
+
+}
+
+label {
+  order: -1;
+  transition: all 0.3s ease-in;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+
+
+input[type="text"] {
+  outline: none;
+
+}
+input[type="email"] {
+  outline: none;
+}
+input[type="tel"] {
+  outline: none;
+}
+
+input[type="url"] {
+  outline: none;
+}
+
+.role-label {
+  color: black;
+  font-family: Trebuchet MS;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.options {
+  margin-left: 3%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.radio-group
+{
+margin-left: 0;
+}
+.form-check-input
+{
+  margin-top: 1.5vh;
+}
+
+input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+}
+
+.btn-register {
+  background-color: #1E90FF;
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-register:hover {
+  color: white;
+  background: #2d669e;
+  transition: 300ms ease-in;
+}

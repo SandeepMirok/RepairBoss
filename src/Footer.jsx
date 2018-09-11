@@ -47,7 +47,7 @@ class footer extends React.Component {
               </div>
 
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 class="text-uppercase font-weight-bold">
+                <h6 className="text-uppercase font-weight-bold">
                   Get Your Car Fixed
                 </h6>
                 <hr className="deep-blue mb-4 mt-0 d-inline-block mx-auto" />
@@ -90,7 +90,7 @@ class footer extends React.Component {
                 <p>
                   <i className="fa fa-home mr-3" /> 1140 Sheppard Ave W #7{" "}
                   <br />
-                  <p className="address">North York, ON M3K 2A2</p>
+                  <label className="address">North York, ON M3K 2A2 </label>
                 </p>
                 <p>
                   <i className="fa fa-envelope mr-3" /> info@example.com
