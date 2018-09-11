@@ -1,9 +1,30 @@
 .back {
-  height: auto;
+  height:auto ;
   min-height:100vh;
-  padding: 4vh 2vh 0vh 2vh;
+  padding: 4vh 2vh 4vh 2vh;
   background: url("../img/carrepair.jpg") no-repeat center center fixed;
   background-size: cover;
+  overflow-x: hidden;
+}
+
+.tagline
+{
+  color: white;
+  font-size: bold;
+  font-family: Trebuchet MS;
+  margin-top: 15px;
+  position: absolute;
+  max-width: 500px;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .tagline
+  {
+    display: none;
+  }
 }
 
 .required:after {
@@ -17,8 +38,8 @@
   border: 5px solid #1E90FF;
   max-width: 600px;
   height: auto;
-  position: relative;
-
+  margin-right: 6vh;
+  position:relative;
 }
 
 .form-header {
@@ -79,6 +100,15 @@ input[type="url"] {
 .radio-group
 {
 margin-left: 0;
+}
+.form-check-input
+{
+  margin-top: 1.5vh;
+}
+
+input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
 }
 
 .btn-register {
