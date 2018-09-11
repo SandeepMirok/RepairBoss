@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./Home";
 import App from "./App";
-import SignUp from "./components/SignUp";
+//import SignUp from "./components/SignUp";
 import Diagnostic from "./components/Diagnostic";
 import ContactUs from "./components/ContactUs";
+import AutoMechanicSignUp from "./components/AutoMechanicSignUp";
 
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
@@ -32,7 +33,7 @@ ReactDOM.render(
       <Route path="/" exact={true} component={Home} />
       <Route path="/Home" exact={true} component={Home} />
       <Route path="/App" component={App} />
-      <Route path="/SignUp" component={SignUp} />
+      <Route path="/SignUp" component={AutoMechanicSignUp} />
       <Route path="/Diagnostic" component={Diagnostic} />
       <Route path="/ContactUs" component={ContactUs} />
     </div>
