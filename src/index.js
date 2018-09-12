@@ -11,7 +11,6 @@ import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style/index.css";
 import { Route, HashRouter } from "react-router-dom";
-import Calendar from "react-calendar";
 
 ReactDOM.render(
   <HashRouter>
@@ -37,7 +36,6 @@ ReactDOM.render(
       <Route path="/SignUp" component={AutoMechanicSignUp} />
       <Route path="/Diagnostic" component={Diagnostic} />
       <Route path="/ContactUs" component={ContactUs} />
-      <Route path="/ContactUs" component={Calendar} />
     </div>
   </HashRouter>,
   document.getElementById("root")
