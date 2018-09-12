@@ -29,6 +29,19 @@ export default class PersonList extends React.Component {
       .then(res => {
         console.log(res);
         console.log(res.data);
+        let token = res.data.id_token;
+        console.log(token);
+        axios
+          .get("http://192.168.2.160:8080/api/account", {
+            headers: { Authorization: "Bearer " + token }
+          })
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+          .catch(err => {
+            console.error(err);
+          });
       });
   };
 
