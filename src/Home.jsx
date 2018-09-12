@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style/Home.css";
+
 import "bootstrap/dist/css/bootstrap.css";
 //import Header from "./Header";
 
@@ -11,6 +12,7 @@ import ServicePart from "./components/Service";
 import FindUs from "./components/FindUs";
 import Heading from "./components/Heading";
 import HeaderVedio from "./HeaderVedio";
+import Calender from "./components/Calender";
 //import Tester from "./Tester";
 
 class Home extends Component {
@@ -25,6 +27,7 @@ class Home extends Component {
         <AboutUs />
         <Heading />
         <ServicePart />
+        <Calender className="cal" />
         <FindUs />
         <div>
           <Footer />

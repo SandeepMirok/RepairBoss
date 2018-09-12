@@ -1,16 +1,37 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/autoMechanicSignUp.css";
+import AutoMechanicNav from "./AutoMechanicNav.js";
 
 class AutoMechanicSignUp extends Component {
   render() {
     return (
+      <div>
+      <div>
+      <AutoMechanicNav/>
+      </div>
       <div className="back img-responsive">
+
+
+            <div className="tagline">
+            <h2>Connecting Auto Economy for <br/>
+            Convenience, Comfort and <br/>Reliability
+            </h2>
+            </div>
+
+
+
+
+
+
+
+
+
         <div className="container autoMechanicContainer">
           <form>
             <div className="row">
               <div className="form-header col-sm-12">
-                <span className="form_headerr">Partner with RepairBoss Form</span>
+                <span className="form_headerr">Welcome to RepairBoss Auto System</span>
               </div>
             </div>
 
@@ -253,6 +274,12 @@ class AutoMechanicSignUp extends Component {
                 <span className="radio-label">No</span>
               </div>
             </div>
+            <div className="row col-sm-12  offset-sm-1">
+            <div className="form-check">
+              <input type="checkbox" className="form-check-input" id="agree_check" name="agree_check"/>
+              <label className="form-check-label" for="agree_check">I Agree that the information provided above is correct.</label>
+            </div>
+            </div>
 
             <div className="row">
               <div className="input-field col-sm-6 offset-sm-3">
@@ -270,6 +297,12 @@ class AutoMechanicSignUp extends Component {
 
           </form>
         </div>
+
+
+
+
+
+      </div>
       </div>
     );
   }
