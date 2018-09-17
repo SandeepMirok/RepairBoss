@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 //import moment from "moment";
 import "../style/Home.css";
 //import "../style/calender.less";
@@ -17,7 +18,7 @@ class Calender extends Component {
           start: "2017-05-01"
         },
         {
-          title: "Long Event",
+          title: "Andre Event",
           start: "2017-05-07",
           end: "2017-05-10"
         },
@@ -54,6 +55,21 @@ class Calender extends Component {
     };
   }
 
+  handleSubmit = event => {
+    event.preventDefault();
+
+    axios
+      .get("http://192.168.2.32:8080/api/schedule-mechanics")
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+    //this.props.history.push("/dashboard");
+  };
+
   render() {
     return (
       <div id="example-component">
@@ -64,12 +80,15 @@ class Calender extends Component {
             center: "title",
             right: "month,basicWeek,basicDay"
           }}
-          defaultDate={"2017-09-12"}
+          defaultDate={"2017-05-12"}
           navLinks={true} // can click day/week names to navigate views
           editable={true}
           eventLimit={true} // allow "more" link when too many events
           events={this.state.events}
         />
+        <form onSubmit={this.handleSubmit}>
+          <button type="submit">Add</button>
+        </form>
       </div>
     );
   }

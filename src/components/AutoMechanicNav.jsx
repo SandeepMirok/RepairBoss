@@ -6,9 +6,9 @@ class AutoMechanicNav extends Component {
   render() {
     return (
       <div>
-      <div>
-      "Connecting Auto Economy for Convenience, Comfort and Reliability"
-      </div>
+        <div>
+          "Connecting Auto Economy for Convenience, Comfort and Reliability"
+        </div>
       </div>
     );
   }
