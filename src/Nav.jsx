@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style/nav.css";
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "./img/logo.jpg";
+import logo from "./img/logo-01.png";
 
 import "./style/login.css";
 import "./js/loginValidator.js";
@@ -20,8 +20,8 @@ class Nav extends Component {
             <a className=" ml-4 mr-4 flex-auto" href="">
               Service & Repair
             </a>
-            <a className=" ml-4 mr-4 flex-auto" href="">
-              Repair Prices
+            <a className=" ml-4 mr-4 flex-auto" href="#/SignUpOld">
+              Old SignUp
             </a>
             <a className="ml-4 mr-4  flex-auto" href="#/Diagnostic">
               Diagnostic

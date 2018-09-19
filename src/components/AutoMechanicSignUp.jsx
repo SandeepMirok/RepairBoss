@@ -2,8 +2,119 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/autoMechanicSignUp.css";
 import AutoMechanicNav from "./AutoMechanicNav";
+import axios from "axios";
 
 class AutoMechanicSignUp extends Component {
+  state = {
+    autogaragename: "",
+    ownerfirstname: "",
+    ownerlastname: "",
+    managerfirstname: "",
+    managerlastname: "",
+    address: "",
+    city: "",
+    postcode: "",
+    website: "",
+    primaryphone: "",
+    secondaryphone: "",
+    email: "",
+    insurancecoverage: "",
+    fullservice: "",
+    independentworkshop: ""
+  };
+
+  handleChangeAutogaragename = event => {
+    this.setState({ autogaragename: event.target.value });
+  };
+  handleChangeOwnerfirstname = event => {
+    this.setState({ ownerfirstname: event.target.value });
+  };
+  handleChangeOwnerlastname = event => {
+    this.setState({ ownerlastname: event.target.value });
+  };
+  handleChangeManagerfirstname = event => {
+    this.setState({ managerfirstname: event.target.value });
+  };
+  handleChangeManagerlastname = event => {
+    this.setState({ managerlastname: event.target.value });
+  };
+  handleChangeAddress = event => {
+    this.setState({ address: event.target.value });
+  };
+  handleChangeCity = event => {
+    this.setState({ city: event.target.value });
+  };
+  handleChangePostcode = event => {
+    this.setState({ postcode: event.target.value });
+  };
+  handleChangewebsite = event => {
+    this.setState({ website: event.target.value });
+  };
+  handleChangePrimaryphone = event => {
+    this.setState({ primaryphone: event.target.value });
+  };
+  handleChangeSecondaryphone = event => {
+    this.setState({ secondaryphone: event.target.value });
+  };
+  handleChangeEmail = event => {
+    this.setState({ email: event.target.value });
+  };
+  handleChangeInsurancecoverage = event => {
+    this.setState({ insurancecoverage: event.target.value });
+  };
+  handleChangefullservice = event => {
+    this.setState({ fullservice: event.target.value });
+  };
+  handleChangeIndependentworkshop = event => {
+    this.setState({ independentworkshop: event.target.value });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const autogaragename = this.state.autogaragename;
+    const ownerfirstname = this.state.ownerfirstname;
+    const ownerlastname = this.state.ownerlastname;
+    const managerfirstname = this.state.managerfirstname;
+    const managerlastname = this.state.managerlastname;
+    const address = this.state.address;
+    const city = this.state.city;
+    const postcode = this.state.postcode;
+    const website = this.state.website;
+    const primaryphone = this.state.primaryphone;
+    const secondaryphone = this.state.secondaryphone;
+    const email = this.state.email;
+    const insurancecoverage = this.state.insurancecoverage;
+    const fullservice = this.state.fullservice;
+    const independentworkshop = this.state.independentworkshop;
+
+    axios
+      .post(`http://192.168.2.160:8080/api/authenticate`, {
+        autogaragename,
+        ownerfirstname,
+        ownerlastname,
+        managerfirstname,
+        managerlastname,
+        address,
+        city,
+        postcode,
+        website,
+        primaryphone,
+        secondaryphone,
+        email,
+        insurancecoverage,
+        fullservice,
+        independentworkshop
+      })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  };
+
   render() {
     return (
       <div>
@@ -20,7 +131,7 @@ class AutoMechanicSignUp extends Component {
           </div>
 
           <div className="container autoMechanicContainer">
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div className="row">
                 <div className="form-header col-sm-12">
                   <span className="form_headerr">
@@ -37,6 +148,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeAutogaragename}
                   />
                   <label htmlFor="autoGarage_name" className="required">
                     Auto Garage Name
@@ -52,6 +164,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeOwnerfirstname}
                   />
                   <label htmlFor="ofirst_name" className="required">
                     Owner's First Name
@@ -65,6 +178,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeOwnerlastname}
                   />
                   <label htmlFor="olast_name" className="required">
                     {" "}
@@ -81,6 +195,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeManagerfirstname}
                   />
                   <label htmlFor="mfirst_name" className="required">
                     Manager's First Name
@@ -94,6 +209,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeManagerlastname}
                   />
                   <label htmlFor="mlast_name" className="required">
                     {" "}
@@ -110,6 +226,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeAddress}
                   />
                   <label htmlFor="address" className="required">
                     Address
@@ -121,6 +238,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangeCity}
                   />
                   <label htmlFor="city_name" className="required">
                     City
@@ -136,6 +254,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="text"
                     required
+                    onChange={this.handleChangePostcode}
                   />
                   <label htmlFor="postal_code" className="required">
                     Postal Code
@@ -148,6 +267,7 @@ class AutoMechanicSignUp extends Component {
                     name="website"
                     className="form-control"
                     type="url"
+                    onChange={this.handleChangewebsite}
                   />
                   <label htmlFor="website">Website</label>
                 </div>
@@ -161,6 +281,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="tel"
                     required
+                    onChange={this.handleChangePrimaryphone}
                   />
                   <label htmlFor="primary_number" className="required">
                     Primary Phone No
@@ -173,6 +294,7 @@ class AutoMechanicSignUp extends Component {
                     name="secondary_number"
                     className="form-control"
                     type="tel"
+                    onChange={this.handleChangeSecondaryphone}
                   />
                   <label htmlFor="secondary_number">Secondary Phone No</label>
                 </div>
@@ -186,6 +308,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="email"
                     required
+                    onChange={this.handleChangeEmail}
                   />
                   <label htmlFor="email" className="required">
                     Email
@@ -199,6 +322,7 @@ class AutoMechanicSignUp extends Component {
                     className="form-control"
                     type="email"
                     required
+                    onChange={this.handleChangeInsurancecoverage}
                   >
                     <option>Speacial hazards</option>
                     <option>Deductibles</option>
@@ -225,6 +349,7 @@ class AutoMechanicSignUp extends Component {
                     id="fullservice_yes"
                     value="Yes"
                     defaultChecked
+                    onChange={this.handleChangefullservice}
                   />
                   <span className="radio-label">Yes</span>
                 </div>
@@ -235,6 +360,7 @@ class AutoMechanicSignUp extends Component {
                     type="radio"
                     id="fullservice_no"
                     value="No"
+                    onChange={this.handleChangefullservice}
                   />
                   <span className="radio-label">No</span>
                 </div>
@@ -252,6 +378,7 @@ class AutoMechanicSignUp extends Component {
                     id="independent_yes"
                     value="Yes"
                     defaultChecked
+                    onChange={this.handleChangeIndependentworkshop}
                   />
                   <span className="radio-label">Yes</span>
                 </div>
@@ -262,6 +389,7 @@ class AutoMechanicSignUp extends Component {
                     type="radio"
                     id="independent_no"
                     value="No"
+                    onChange={this.handleChangeIndependentworkshop}
                   />
                   <span className="radio-label">No</span>
                 </div>

@@ -57,16 +57,22 @@ class Calender extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
+    let token =
+      "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTUzNzQ1NDY1NX0.7-K76tFI2r6Aj7Q9bS4vXMBD_-JCTUaAJgdiAiHWR-cksQu0d_W2sVgnJWblQa4Fk74Ii6_MrLCacuAW95lRaw";
     axios
-      .get("http://192.168.2.32:8080/api/schedule-mechanics")
+      .get("http://192.168.2.160:8080/api/mechanics", {
+        headers: { Authorization: "Bearer " + token }
+      })
       .then(res => {
         console.log(res);
         console.log(res.data);
+        let availabilityDateTime = res.data.availabilityDateTime;
+        console.log(availabilityDateTime);
       })
       .catch(err => {
         console.error(err);
       });
+
     //this.props.history.push("/dashboard");
   };
 
@@ -75,10 +81,11 @@ class Calender extends Component {
       <div id="example-component">
         <FullCalendar
           id="your-custom-ID"
+          themeSystem="bootstrap4"
           header={{
-            left: "prev,next today myCustomButton",
+            left: "prev,next today",
             center: "title",
-            right: "month,basicWeek,basicDay"
+            right: "month,agendaWeek,agendaDay,listMonth"
           }}
           defaultDate={"2017-05-12"}
           navLinks={true} // can click day/week names to navigate views
