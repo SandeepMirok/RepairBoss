@@ -157,6 +157,7 @@ class Nav extends Component {
                         className="btn btn-primary btn-lg loginText "
                         data-dismiss="modal"
                         id="modalSubmit"
+                        onSubmit={this.handleSubmit}
                       >
                         Login
                       </button>

@@ -38,6 +38,7 @@ export default class PersonList extends React.Component {
           .then(res => {
             console.log(res);
             console.log(res.data);
+            console.log(res.data.email);
           })
           .catch(err => {
             console.error(err);

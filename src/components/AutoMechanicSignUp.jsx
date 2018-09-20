@@ -89,7 +89,7 @@ class AutoMechanicSignUp extends Component {
     const independentworkshop = this.state.independentworkshop;
 
     axios
-      .post(`http://192.168.2.160:8080/api/authenticate`, {
+      .post(`http://192.168.2.160:8080/api/mechanics`, {
         autogaragename,
         ownerfirstname,
         ownerlastname,
@@ -114,6 +114,10 @@ class AutoMechanicSignUp extends Component {
         console.error(err);
       });
   };
+
+  newMethod() {
+    return "Andre";
+  }
 
   render() {
     return (
