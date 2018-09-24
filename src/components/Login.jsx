@@ -2,6 +2,10 @@ import React from "react";
 import axios from "axios";
 
 export default class PersonList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   state = {
     name: "",
     password: ""
@@ -21,7 +25,7 @@ export default class PersonList extends React.Component {
     const password = this.state.password;
 
     axios
-      .post(`http://192.168.2.160:8080/api/authenticate`, {
+      .post(`http://192.168.2.85:8080/api/authenticate`, {
         password,
         remrememberMe: false,
         username

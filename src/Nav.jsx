@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import "./style/nav.css";
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "./img/logo-01.png";
+import logo from "./img/LOGO.png";
 import axios from "axios";
 
 import "./style/login.css";
 import "./js/loginValidator.js";
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
   state = {
     name: "",
     password: ""
@@ -18,6 +22,10 @@ class Nav extends Component {
   };
   handleChangePassword = event => {
     this.setState({ password: event.target.value });
+  };
+
+  handleTesting = event => {
+    console.log("Testtando");
   };
 
   handleSubmit = event => {
@@ -157,7 +165,7 @@ class Nav extends Component {
                         className="btn btn-primary btn-lg loginText "
                         data-dismiss="modal"
                         id="modalSubmit"
-                        onSubmit={this.handleSubmit}
+                        onSubmit={this.handleTesting}
                       >
                         Login
                       </button>

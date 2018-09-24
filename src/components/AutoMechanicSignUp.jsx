@@ -89,22 +89,26 @@ class AutoMechanicSignUp extends Component {
     const independentworkshop = this.state.independentworkshop;
 
     axios
-      .post(`http://192.168.2.160:8080/api/mechanics`, {
-        autogaragename,
-        ownerfirstname,
-        ownerlastname,
-        managerfirstname,
-        managerlastname,
-        address,
-        city,
-        postcode,
-        website,
-        primaryphone,
-        secondaryphone,
-        email,
-        insurancecoverage,
-        fullservice,
-        independentworkshop
+      .post(`http://192.168.2.85:8080/api/mechanics`, {
+        fullService: false,
+        independent: false,
+        disabled: false,
+        shopName: "test123",
+        website: "www.abc.com",
+        avaiabilityDateTime: "2028-01-02T03:00:00.000Z",
+        address: {
+          city: { id: 1 },
+          postalCode: { id: 1 },
+          streetName: "dontknow",
+          unitNumber: "blabla"
+        },
+        userAccount: {
+          email: "vishal@vishal.com",
+          firstName: "vishal",
+          lastName: "prajapati",
+          phone: "1234",
+          username: "vishalxxx"
+        }
       })
       .then(res => {
         console.log(res);
