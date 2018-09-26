@@ -78,8 +78,8 @@ class Nav extends Component {
             <a className="ml-4 mr-4  flex-auto" href="#/Diagnostic">
               Diagnostic
             </a>
-            <a className="ml-4 mr-4  flex-auto" href="">
-              Reviews
+            <a className="ml-4 mr-4  flex-auto" href="#/IndexVerify">
+              VerifyPage
             </a>
             <a className="ml-4 mr-4  flex-auto" href="">
               My Car
