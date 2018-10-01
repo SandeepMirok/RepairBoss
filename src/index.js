@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import Home from "./Home";
 import App from "./App";
 import SignUp from "./components/SignUp";
-import Diagnostic from "./components/Diagnostic";
+//import Diagnostic from "./components/Diagnostic";
 import ContactUs from "./components/ContactUs";
 import AutoMechanicSignUp from "./components/AutoMechanicSignUp";
-import RepairBossNav from "./components/RepairBossNav";
+//import RepairBossNav from "./components/RepairBossNav";
 import IndexVerify from "./components/Verify/IndexVerify";
 
 import registerServiceWorker from "./registerServiceWorker";
