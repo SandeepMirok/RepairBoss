@@ -60,17 +60,17 @@ class RepairBossNav extends Component {
                   Car Research
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="">
-                    Action
+                  <a className="dropdown-item" href="#/ContactUs">
+                    ContactUs
                   </a>
 
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="">
-                    Another action
+                  <a className="dropdown-item" href="#/IndexVerify">
+                    Verify
                   </a>
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="">
-                    Something else here
+                  <a className="dropdown-item" href="#/App">
+                    APP
                   </a>
                 </div>
               </li>
@@ -78,19 +78,19 @@ class RepairBossNav extends Component {
 
             <ul className="ml-auto navbar-nav">
               <li className="nav-item cool-link">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="#/SignUp">
                   For Auto Mechanic
                 </a>
               </li>
 
               <li className="nav-item cool-link">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="#/SignUpOld">
                   Signup
                 </a>
               </li>
 
               <li className="nav-item cool-link">
-                <a className="nav-link" href="">
+                <a className="nav-link" href="#/Login">
                   Login
                 </a>
               </li>

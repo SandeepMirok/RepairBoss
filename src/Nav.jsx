@@ -1,182 +1,108 @@
 import React, { Component } from "react";
 import "./style/nav.css";
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "./img/LOGO.png";
-import axios from "axios";
+
+import twitter from "./img/RepairBossLogo.png";
 
 import "./style/login.css";
 import "./js/loginValidator.js";
 
 class Nav extends Component {
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  state = {
-    name: "",
-    password: ""
-  };
-
-  handleChangeName = event => {
-    this.setState({ name: event.target.value });
-  };
-  handleChangePassword = event => {
-    this.setState({ password: event.target.value });
-  };
-
-  handleTesting = event => {
-    console.log("Testtando");
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-
-    const username = this.state.name;
-    const password = this.state.password;
-
-    axios
-      .post(`http://192.168.2.160:8080/api/authenticate`, {
-        password,
-        remrememberMe: false,
-        username
-      })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-        let token = res.data.id_token;
-        console.log(token);
-        axios
-          .get("http://192.168.2.160:8080/api/account", {
-            headers: { Authorization: "Bearer " + token }
-          })
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
-          })
-          .catch(err => {
-            console.error(err);
-          });
-      });
-  };
-
   render() {
     return (
-      <div>
-        <div className="py-1 mb-2 positionFixed" id="collapsibleNavbar">
-          <nav className="nav navbar nav-margin justify-content-center">
-            <img src={logo} alt="Logo" />
-
-            <a className=" ml-4 mr-4 flex-auto " href="">
-              Home
-            </a>
-            <a className=" ml-4 mr-4 flex-auto" href="">
-              Service & Repair
-            </a>
-            <a className=" ml-4 mr-4 flex-auto" href="#/SignUpOld">
-              Old SignUp
-            </a>
-            <a className="ml-4 mr-4  flex-auto" href="#/Diagnostic">
-              Diagnostic
-            </a>
-            <a className="ml-4 mr-4  flex-auto" href="#/IndexVerify">
-              VerifyPage
-            </a>
-            <a className="ml-4 mr-4  flex-auto" href="#/App">
-              Testind
-            </a>
-            <a className="ml-4 mr-4  flex-auto" href="#/ContactUs">
-              Contact
-            </a>
-            <a className="flex-auto-login" href="#/SignUp">
-              <span className="fa fa-user-o" /> Sign Up
-            </a>
-            <a
-              className=" ml-3 mr-3 flex-auto-login"
-              data-toggle="modal"
-              data-target="#myModal"
-            >
-              <span className=" fa fa-sign-in" /> Login
-            </a>
-          </nav>
-        </div>
+      <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-dark">
         <div className="container">
-          <div className="modal fade" id="myModal" tabIndex="-1">
-            <div className="modal-dialog modal-lg">
-              <div className="modal-content">
-                <form id="newModalForm" onSubmit={this.handleSubmit}>
-                  <div className="modal-header">
-                    <h4 className="modal-title form-header">
-                      Login to RepairBoss
-                    </h4>
-                    <button
-                      type="button"
-                      className="close"
-                      data-dismiss="modal"
-                      id="closeModal"
-                    >
-                      &times;
-                    </button>
-                  </div>
+          <a className="navbar-brand" href="#/Home">
+            <img
+              src={twitter}
+              className="repairBossLogo"
+              alt="RepairBoss Logo"
+            />
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
 
-                  <div className="modal-body">
-                    <div className="form-group">
-                      <label htmlFor="inputUserName" className="popupText">
-                        Username
-                      </label>
-                      <input
-                        className="form-control"
-                        placeholder="Please enter your username"
-                        type="text"
-                        id="inputUserName"
-                        required
-                        onChange={this.handleChangeName}
-                      />
-                      <span className="hide requiredUser">
-                        This is required field
-                      </span>
-                    </div>
+          <div className="collapse navbar-collapse" id="navbarResponsive">
+            <ul className="navbar-nav ">
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="">
+                  Get an Estimate
+                  <span className="sr-only">(current)</span>
+                </a>
+              </li>
 
-                    <div className="form-group">
-                      <label htmlFor="inputPassword" className="popupText">
-                        Password
-                      </label>
-                      <input
-                        className="form-control"
-                        placeholder="Please enter your password"
-                        type="password"
-                        id="inputPassword"
-                        required
-                        onChange={this.handleChangePassword}
-                      />
-                      <span className="hide requiredPassword">
-                        This is required field
-                      </span>
-                    </div>
-                  </div>
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="">
+                  Find a Shop
+                </a>
+              </li>
 
-                  <div className="modal-footer">
-                    <a href="" className="mr-auto forgotPassword">
-                      Forgot Password ?
-                    </a>
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="">
+                  Your Car
+                </a>
+              </li>
 
-                    <div className="form-group">
-                      <button
-                        type="submit"
-                        className="btn btn-primary btn-lg loginText "
-                        data-dismiss="modal"
-                        id="modalSubmit"
-                        onSubmit={this.handleTesting}
-                      >
-                        Login
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+              <li className="nav-item cool-link dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href=""
+                  id="navbarDropdown2"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Car Research
+                </a>
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a className="dropdown-item" href="#/ContactUs">
+                    ContactUs
+                  </a>
+
+                  <div className="dropdown-divider" />
+                  <a className="dropdown-item" href="#/IndexVerify">
+                    Verify
+                  </a>
+                  <div className="dropdown-divider" />
+                  <a className="dropdown-item" href="#/App">
+                    APP
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <ul className="ml-auto navbar-nav">
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="#/SignUp">
+                  For Auto Mechanic
+                </a>
+              </li>
+
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="#/SignUpOld">
+                  Signup
+                </a>
+              </li>
+
+              <li className="nav-item cool-link">
+                <a className="nav-link" href="#/Login">
+                  Login
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }

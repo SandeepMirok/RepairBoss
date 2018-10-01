@@ -8,6 +8,7 @@ import ContactUs from "./components/ContactUs";
 import AutoMechanicSignUp from "./components/AutoMechanicSignUp";
 //import RepairBossNav from "./components/RepairBossNav";
 import IndexVerify from "./components/Verify/IndexVerify";
+import LoginFire from "./components/LoginFire";
 
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
@@ -41,6 +42,7 @@ ReactDOM.render(
       <Route path="/Diagnostic" component={SignUp} />
       <Route path="/ContactUs" component={ContactUs} />
       <Route path="/IndexVerify" component={IndexVerify} />
+      <Route path="/Login" component={LoginFire} />
     </div>
   </HashRouter>,
   document.getElementById("root")

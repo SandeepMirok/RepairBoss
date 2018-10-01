@@ -18,7 +18,7 @@ class Verifypage extends Component {
     return (
       <div>
         <NavVerify />
-        <div className="space">
+        <div className="">
           <h1>Vefify Page</h1>
 
           <table className="table">
