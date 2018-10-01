@@ -1,4 +1,4 @@
-img {
+ /* img {
   width: 8%;
   height: 5%;
 }
@@ -33,8 +33,8 @@ a:hover {
   z-index: 3;
 
   position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
+  /*top: 0; /* Position the navbar at the top of the page */
+  /*width: 100%;
 }
 div#collapsibleNavbar {
   background-color: white;
@@ -57,4 +57,4 @@ div#collapsibleNavbar {
 .cl {
   background-color: #1e90ff;
   color: #1e90ff;
-}
+} */

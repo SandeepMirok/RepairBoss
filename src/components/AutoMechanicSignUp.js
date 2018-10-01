@@ -1,34 +1,88 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import AutoMechanicFooter from "./AutoMechanicFooter";
+import RepairBossNav from "./RepairBossNav";
+import axios from "axios";
 import "../style/autoMechanicSignUp.css";
-import AutoMechanicNav from "./AutoMechanicNav.js";
 
 class AutoMechanicSignUp extends Component {
+
+state={
+  autoGarage_name:'',
+  ofirst_name:'',
+  olast_name:'',
+  mfirst_name:'',
+  mlast_name:'',
+  address:'',
+  city_name:'',
+  postal_code:'',
+  website:'',
+  primary_number:'',
+  secondary_number:'',
+  Email:'',
+  insurance_policy:'',
+  fullservice:'',
+  independent_workshop:'',
+  agree_check:''
+}
+
+handleAutoGarageName = event =>
+{
+  this.setState ({autoGarage_name:event.target.value});
+}
+
+
+handleSubmit = event =>
+{
+  event.preventDefault();
+  console.log(this.state.autoGarage_name);
+  const name = this.state.autoGarage_name;
+  axios
+    .post('http://192.168.2.160:8080/api/user-accounts', { "username" : "ojfsaojfkdlsajfkdaslf"})
+    .then(res =>
+    {
+      console.log(res);
+      console.log(res.data);
+      let userAccount = Object.assign({}, res.data, {
+          "collisionCentres": undefined,
+          "insuranceCompanies": undefined,
+          "mechanics": undefined});
+
+      axios.post('http://192.168.2.160:8080/api/mechanics', {
+        "availabilityDateTime":"2018-09-27T03:07:58.147Z",
+        "fullService":true,
+        "independent":true,
+        "shopName": name,
+        userAccount,
+        "address":{
+           "id": 1
+        },
+        "website":"www.james.com"
+      }).then(res => {
+        console.log("==========================");
+        console.log(res.data)
+      })
+    });
+}
+
+
+
+
   render() {
     return (
-      <div>
-      <div>
-      <AutoMechanicNav/>
-      </div>
+<div>
+
+        <RepairBossNav/>
+
       <div className="back img-responsive">
 
-
             <div className="tagline">
-            <h2>Connecting Auto Economy for <br/>
-            Convenience, Comfort and <br/>Reliability
+            <h2>Connecting Auto Economy<br/>
+            for Convenience, Comfort <br/>and Reliability
             </h2>
             </div>
 
-
-
-
-
-
-
-
-
-        <div className="container autoMechanicContainer">
-          <form>
+<div className="container autoMechanicContainer">
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="form-header col-sm-12">
                 <span className="form_headerr">Welcome to RepairBoss Auto System</span>
@@ -43,6 +97,7 @@ class AutoMechanicSignUp extends Component {
                   className="form-control"
                   type="text"
                   required
+                  onChange ={this.handleAutoGarageName}
                 />
                 <label htmlFor="autoGarage_name" className="required">
                   Auto Garage Name
@@ -200,10 +255,9 @@ class AutoMechanicSignUp extends Component {
 
               <div className="input-field col-sm-6">
                 <select
-                  id="insurance_coverage"
-                  name="insurance_coverage"
+                  id="insurance_policy"
+                  name="insurance_policy"
                   className="form-control"
-                  type="email"
                   required>
                   <option>Speacial hazards</option>
                   <option>Deductibles</option>
@@ -212,11 +266,43 @@ class AutoMechanicSignUp extends Component {
                   <option>Employee's tools</option>
                   <option>Pollution liability</option>
                 </select>
-                <label htmlFor="insurance_coverage" className="required">
-                  Insurance Coverage
+                <label htmlFor="insurance_policy" className="required">
+                  Insurance Policy
                 </label>
               </div>
             </div>
+
+            <div className="row">
+              <div className="input-field col-sm-6">
+                <input
+                  id="datepicker"
+                  name="datepicker"
+                  className="form-control"
+                  type="text"
+                  required
+                />
+                <label htmlFor="datepicker-8" className="required">
+                  Please select date
+                </label>
+              </div>
+
+              <div className="input-field col-sm-6">
+                <select
+                  id="timepicker"
+                  name="timepicker"
+                  className="form-control"
+                  required>
+
+                  <option>Speacial hazards</option>
+                  <option>Deductibles</option>
+
+                </select>
+                <label htmlFor="timepicker" className="required">
+                Please select time
+                </label>
+              </div>
+            </div>
+
 
 
             <div className="row radio-group col-sm-12 form-check-inline">
@@ -277,7 +363,7 @@ class AutoMechanicSignUp extends Component {
             <div className="row col-sm-12  offset-sm-1">
             <div className="form-check">
               <input type="checkbox" className="form-check-input" id="agree_check" name="agree_check"/>
-              <label className="form-check-label" for="agree_check">I Agree that the information provided above is correct.</label>
+              <label className="form-check-label" htmlFor="agree_check">I Agree that the information provided above is correct.</label>
             </div>
             </div>
 
@@ -303,6 +389,12 @@ class AutoMechanicSignUp extends Component {
 
 
       </div>
+
+
+      <div>
+
+      </div>
+        <AutoMechanicFooter/>
       </div>
     );
   }

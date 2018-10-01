@@ -14,16 +14,20 @@
   font-family: Trebuchet MS;
   margin-top: 15px;
   position: absolute;
-  max-width: 500px;
-
+  width: 35%;
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 930px) {
 
   .tagline
   {
     display: none;
+
+  }
+
+  .autoMechanicContainer {
+    margin-right:auto !important;
   }
 }
 
