@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./style/Home.css";
+
 import "bootstrap/dist/css/bootstrap.css";
 //import Header from "./Header";
 

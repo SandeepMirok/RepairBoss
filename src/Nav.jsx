@@ -1,12 +1,64 @@
 import React, { Component } from "react";
 import "./style/nav.css";
 import "bootstrap/dist/css/bootstrap.css";
-import logo from "./img/logo.jpg";
+import logo from "./img/LOGO.png";
+import axios from "axios";
 
 import "./style/login.css";
 import "./js/loginValidator.js";
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  state = {
+    name: "",
+    password: ""
+  };
+
+  handleChangeName = event => {
+    this.setState({ name: event.target.value });
+  };
+  handleChangePassword = event => {
+    this.setState({ password: event.target.value });
+  };
+
+  handleTesting = event => {
+    console.log("Testtando");
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const username = this.state.name;
+    const password = this.state.password;
+
+    axios
+      .post(`http://192.168.2.160:8080/api/authenticate`, {
+        password,
+        remrememberMe: false,
+        username
+      })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+        let token = res.data.id_token;
+        console.log(token);
+        axios
+          .get("http://192.168.2.160:8080/api/account", {
+            headers: { Authorization: "Bearer " + token }
+          })
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      });
+  };
+
   render() {
     return (
       <div>
@@ -20,14 +72,14 @@ class Nav extends Component {
             <a className=" ml-4 mr-4 flex-auto" href="">
               Service & Repair
             </a>
-            <a className=" ml-4 mr-4 flex-auto" href="">
-              Repair Prices
+            <a className=" ml-4 mr-4 flex-auto" href="#/SignUpOld">
+              Old SignUp
             </a>
             <a className="ml-4 mr-4  flex-auto" href="#/Diagnostic">
               Diagnostic
             </a>
-            <a className="ml-4 mr-4  flex-auto" href="">
-              Reviews
+            <a className="ml-4 mr-4  flex-auto" href="#/IndexVerify">
+              VerifyPage
             </a>
             <a className="ml-4 mr-4  flex-auto" href="">
               My Car
@@ -51,7 +103,7 @@ class Nav extends Component {
           <div className="modal fade" id="myModal" tabIndex="-1">
             <div className="modal-dialog modal-lg">
               <div className="modal-content">
-                <form id="newModalForm">
+                <form id="newModalForm" onSubmit={this.handleSubmit}>
                   <div className="modal-header">
                     <h4 className="modal-title form-header">
                       Login to RepairBoss
@@ -77,6 +129,7 @@ class Nav extends Component {
                         type="text"
                         id="inputUserName"
                         required
+                        onChange={this.handleChangeName}
                       />
                       <span className="hide requiredUser">
                         This is required field
@@ -93,6 +146,7 @@ class Nav extends Component {
                         type="password"
                         id="inputPassword"
                         required
+                        onChange={this.handleChangePassword}
                       />
                       <span className="hide requiredPassword">
                         This is required field
@@ -111,6 +165,7 @@ class Nav extends Component {
                         className="btn btn-primary btn-lg loginText "
                         data-dismiss="modal"
                         id="modalSubmit"
+                        onSubmit={this.handleTesting}
                       >
                         Login
                       </button>

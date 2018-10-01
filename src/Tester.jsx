@@ -2,38 +2,17 @@ import React, { Component } from "react";
 import "./style/nav.css";
 import "bootstrap/dist/css/bootstrap.css";
 import logo from "./img/logo.jpg";
+import React from "react";
+import Moment from "react-moment";
 class Tester extends Component {
   render() {
+    const date = new Date();
     return (
       <div>
-        <nav className="navbar navbar-expand-md ">
-          <img src={logo} alt="Logo" />
-          <button
-            className="navbar-toggler bg-dark "
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapsibleNavbar"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="collapsibleNavbar">
-            <a class="nav-link" href="">
-              Link
-            </a>
-            <a class="nav-link" href="">
-              Link
-            </a>
-            <a class="nav-link" href="">
-              Link
-            </a>
-            <a class="nav-link" href="">
-              Link
-            </a>
-            <a class="nav-link" href="">
-              Link
-            </a>
-          </div>
-        </nav>
+        <Moment add={{ hours: 12 }}>{date}</Moment>
+        <Moment add={{ days: 1, hours: 12 }}>{date}</Moment>
+        <Moment subtract={{ hours: 12 }}>{date}</Moment>
+        <Moment subtract={{ days: 1, hours: 12 }}>{date}</Moment>
       </div>
     );
   }
