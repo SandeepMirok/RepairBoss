@@ -20,8 +20,9 @@ class Verifypage extends Component {
         <NavVerify />
         <div className="space">
           <h1>Vefify Page</h1>
-          <table class="table">
-            <thead class="thead-dark">
+
+          <table className="table">
+            <thead className="thead-dark">
               <tr>
                 <th scope="col">S.No</th>
                 <th scope="col">Auto Shop Name</th>
@@ -41,16 +42,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radio">
+                  <div className="radio">
                     <input type="radio" name="radios" id="radio1" />
-                    <label for="radio1">Yes</label>
+                    <label htmlFor="radio1">Yes</label>
                     <input type="radio" name="radios" id="radio2" />
-                    <label for="radio2">No</label>
+                    <label htmlFor="radio2">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -62,16 +63,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radio">
+                  <div className="radio">
                     <input type="radio" name="radios2" id="radio2" />
-                    <label for="radio4">Yes</label>
+                    <label htmlFor="radio4">Yes</label>
                     <input type="radio" name="radios2" id="radio2" />
-                    <label for="radio4">No</label>
+                    <label htmlFor="radio4">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -83,16 +84,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radios">
+                  <div className="radios">
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">Yes</label>
+                    <label htmlFor="radio6">Yes</label>
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">No</label>
+                    <label htmlFor="radio6">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -104,16 +105,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radios">
+                  <div className="radios">
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">Yes</label>
+                    <label htmlFor="radio6">Yes</label>
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">No</label>
+                    <label htmlFor="radio6">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -125,16 +126,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radios">
+                  <div className="radios">
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">Yes</label>
+                    <label htmlFor="radio6">Yes</label>
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">No</label>
+                    <label htmlFor="radio6">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -146,16 +147,16 @@ class Verifypage extends Component {
                 <td>666-666-666</td>
                 <td>andre@andre.com</td>
                 <td>
-                  <div class="radios">
+                  <div className="radios">
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">Yes</label>
+                    <label htmlFor="radio6">Yes</label>
                     <input type="radio" name="radios3" id="radio3" />
-                    <label for="radio6">No</label>
+                    <label htmlFor="radio6">No</label>
                   </div>
                 </td>
                 <td>Verifia</td>
                 <td>
-                  <button type="button" class="btn btn-warning">
+                  <button type="button" className="btn btn-warning">
                     Send
                   </button>
                 </td>
@@ -163,8 +164,8 @@ class Verifypage extends Component {
             </tbody>
           </table>
         </div>
-        <footer class="page-footer font-small blue">
-          <div class="footer-copyright text-center py-3">
+        <footer className="page-footer font-small blue">
+          <div className="footer-copyright text-center py-3">
             © 2018 Copyright:
             <a href="https://mdbootstrap.com/bootstrap-tutorial/">
               {" "}

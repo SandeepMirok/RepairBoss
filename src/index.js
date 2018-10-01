@@ -6,12 +6,9 @@ import SignUp from "./components/SignUp";
 import Diagnostic from "./components/Diagnostic";
 import ContactUs from "./components/ContactUs";
 import AutoMechanicSignUp from "./components/AutoMechanicSignUp";
-<<<<<<< HEAD
 import RepairBossNav from "./components/RepairBossNav";
-=======
 import IndexVerify from "./components/Verify/IndexVerify";
 
->>>>>>> 333cca75200302137583b5a3434fadb6ca0932d4
 import registerServiceWorker from "./registerServiceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style/index.css";
@@ -37,12 +34,9 @@ ReactDOM.render(
       */}
       <Route path="/" exact={true} component={Home} />
       <Route path="/Home" exact={true} component={Home} />
-<<<<<<< HEAD
       <Route path="/App" component={SignUp} />
-=======
       <Route path="/App" component={App} />
       <Route path="/SignUpOld" component={SignUp} />
->>>>>>> 333cca75200302137583b5a3434fadb6ca0932d4
       <Route path="/SignUp" component={AutoMechanicSignUp} />
       <Route path="/Diagnostic" component={SignUp} />
       <Route path="/ContactUs" component={ContactUs} />

@@ -81,13 +81,6 @@ class LoginVerify extends Component {
           >
             Login
           </button>
-          <button
-            onClick={this.signup}
-            style={{ marginLeft: "25px" }}
-            className="btn btn-success"
-          >
-            Signup
-          </button>
         </form>
       </div>
     );
