@@ -12,6 +12,7 @@ import ServicePart from "./components/Service";
 import FindUs from "./components/FindUs";
 import Heading from "./components/Heading";
 import HeaderVedio from "./HeaderVedio";
+import TimeTest from "./components/TimeTest";
 //import Tester from "./Tester";
 
 class Home extends Component {
@@ -27,6 +28,7 @@ class Home extends Component {
         <Heading />
         <ServicePart />
         <FindUs />
+        <TimeTest />
         <div>
           <Footer />
         </div>

@@ -4,7 +4,28 @@ import "../style/autoMechanicSignUp.css";
 import AutoMechanicNav from "./AutoMechanicNav";
 import axios from "axios";
 
+import DatePicker from "react-datepicker";
+import moment from "moment";
+
+import "react-datepicker/dist/react-datepicker.css";
+
 class AutoMechanicSignUp extends Component {
+  constructor(props) {
+    super(props);
+    const today = new Date();
+    this.state = {
+      val: new Date(),
+      startDate: moment(),
+      options: [{ Time: "8:00" }, { Time: "8:30" }, { Time: "8:00" }]
+    };
+    this.handleChangeDate = this.handleChange.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
   state = {
     autogaragename: "",
     ownerfirstname: "",
@@ -58,6 +79,9 @@ class AutoMechanicSignUp extends Component {
   };
   handleChangeEmail = event => {
     this.setState({ email: event.target.value });
+  };
+  handleChangeDate = event => {
+    this.setState({ date: event.target.value });
   };
   handleChangeInsurancecoverage = event => {
     this.setState({ insurancecoverage: event.target.value });
@@ -132,6 +156,7 @@ class AutoMechanicSignUp extends Component {
         <div className="back img-responsive">
           <div className="tagline">
             <h2>
+              {this.state.date}
               Connecting Auto Economy for <br />
               Convenience, Comfort and <br />
               Reliability
@@ -345,6 +370,64 @@ class AutoMechanicSignUp extends Component {
                 </div>
               </div>
 
+              <div className="row">
+                <div className="input-field col-sm-6">
+                  <select className="form-control">
+                    {this.state.options.map(function(item) {
+                      return <option value={item.value}>{item.Time}</option>;
+                    })}
+                    onChange=
+                    {this.handleChangePrimaryphone}
+                  </select>
+                  <label htmlFor="time" className="required">
+                    Time
+                  </label>
+                </div>
+
+                <div className="input-field col-sm-6">
+                  <DatePicker
+                    className="form-control"
+                    id="date"
+                    dateWheels="|D M d|"
+                    minDate={this.state.val}
+                    selected={this.state.startDate}
+                    onChange={this.handleChangeDate}
+                    highlightDates={[
+                      moment().subtract(8, "days"),
+                      moment().add(12, "days")
+                    ]}
+                    filterDate={this.isWeekday}
+                    disabledKeyboardNavigation
+                    readOnly={false}
+                    showMonthDropdown
+                    fixedHeight
+                    selectedDays={[
+                      new Date(2017, 10, 12),
+                      new Date(2017, 10, 2),
+                      {
+                        after: new Date(2017, 3, 20),
+                        before: new Date(2017, 3, 25)
+                      }
+                    ]}
+                    tabIndex={2}
+                    useShortMonthInDropdown
+                    isClearable={true}
+                    scrollableYearDropdown
+                    yearDropdownItemNumber={15}
+                    pagedNavigation
+                    fixedWeeks
+                    disabledDates={[
+                      new Date(2017, 10, 12),
+                      new Date(2017, 10, 2),
+                      {
+                        after: new Date(2018, 10, 20),
+                        before: new Date(2018, 10, 25)
+                      }
+                    ]}
+                  />
+                  <label htmlFor="date">Date</label>
+                </div>
+              </div>
               <div className="row radio-group col-sm-12 form-check-inline">
                 <div className="role-label">
                   <span className="span-role">Full Service:</span>
@@ -402,6 +485,7 @@ class AutoMechanicSignUp extends Component {
                   <span className="radio-label">No</span>
                 </div>
               </div>
+
               <div className="row col-sm-12  offset-sm-1">
                 <div className="form-check">
                   <input
