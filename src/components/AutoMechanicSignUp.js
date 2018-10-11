@@ -372,7 +372,13 @@ class AutoMechanicSignUp extends Component {
 
               <div className="row">
                 <div className="input-field col-sm-6">
-                  <select className="form-control">{this.state.options}</select>
+                  <select className="form-control">
+                    {this.state.options.map(function(item) {
+                      return <option value={item.value}>{item.Time}</option>;
+                    })}
+                    onChange=
+                    {this.handleChangePrimaryphone}
+                  </select>
                   <label htmlFor="time" className="required">
                     Time
                   </label>

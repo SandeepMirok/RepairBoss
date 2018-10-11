@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../style/AutoMechanicNav.css";
 
 class AutoMechanicNav extends Component {
   render() {

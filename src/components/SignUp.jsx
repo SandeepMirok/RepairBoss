@@ -1,11 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import AutoMechanicFooter from "./AutoMechanicFooter";
 import "../style/signup.css";
+import RepairBossNav from "./RepairBossNav";
 
 class signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: '',
       password: "",
       passwordConfirm: "",
       showMechanic: false,
@@ -103,48 +106,47 @@ class signup extends React.Component {
     error.textContent = "";
     return true;
   }
+
+  handleUserName = event =>
+  {
+    this.setState ({username:event.target.value});
+  }
+
+  handleSubmit = event =>
+  {
+    alert(this.state.username);
+  }
+
+
+
+
   render() {
     return (
-      <div className="back img-responsive">
+    <div>
+    <RepairBossNav/>
+
+      <div className="backsignup img-responsive">
+
+
         <div className="container signupContainer">
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="form-header col col-sm-12">
-                <span>Sign up to RepairBoss</span>
+                <span>Login to RepairBoss</span>
               </div>
             </div>
 
-            <div className="row">
-              <div className="input-field col col-sm-6 ">
-                <input
-                  id="first_name"
-                  className="input-border"
-                  type="text"
-                  required
-                />
-                <label htmlFor="first_name">First Name</label>
-              </div>
-
-              <div className="input-field col col-sm-6">
-                <input
-                  id="last_name"
-                  className="input-border"
-                  type="text"
-                  required
-                />
-                <label htmlFor="last_name">Last Name</label>
-              </div>
-            </div>
 
             <div className="row">
               <div className="input-field col col-sm-12">
                 <input
-                  id="email"
-                  className="input-border"
-                  type="email"
+                  id="username"
+                  className="form-control"
+                  type="text"
                   required
+                  onChange ={this.handleUserName}
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlFor="username">Username</label>
               </div>
             </div>
 
@@ -152,7 +154,7 @@ class signup extends React.Component {
               <div className="input-field col col-sm-12">
                 <input
                   id="password"
-                  className="input-border"
+                  className="form-control"
                   type="password"
                   name="password"
                   ref="password"
@@ -170,7 +172,7 @@ class signup extends React.Component {
               <div className="input-field col col-sm-12">
                 <input
                   id="password_two"
-                  className="input-border"
+                  className="form-control"
                   type="password"
                   name="passwordConfirm"
                   ref="passwordConfirm"
@@ -183,46 +185,7 @@ class signup extends React.Component {
               </div>
             </div>
 
-            <div className="row radio-group ">
-              <div className="role-label">
-                <span className="span-role">Select your role:</span>
-              </div>
 
-              <div className="options">
-                <input
-                  name="user-type"
-                  type="radio"
-                  id="user"
-                  defaultChecked
-                  onChange={this.hide}
-                />
-                <span className="radio-label">User</span>
-              </div>
-
-              <div className="options">
-                <input
-                  name="user-type"
-                  type="radio"
-                  id="mechanic"
-                  value="mechanic"
-                  onChange={this.toggleMechanic}
-                />
-                <span className="radio-label">Mechanic</span>
-              </div>
-
-              <div className="options">
-                <input
-                  name="user-type"
-                  type="radio"
-                  id="insurance"
-                  onChange={this.toggleInsurance}
-                />
-                <span className="radio-label">Insurance</span>
-              </div>
-            </div>
-
-            {this.state.showMechanic && <Mechanic />}
-            {this.state.showInsurance && <Insurance />}
 
             <div className="row">
               <div className="input-field col-sm-6 offset-sm-3">
@@ -236,57 +199,18 @@ class signup extends React.Component {
               </div>
             </div>
           </form>
-        </div>
-      </div>
-    );
-  }
-}
-class Mechanic extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className="row">
-          <div className="input-field col-sm-6">
-            <input id="shop_name" className="input-border" type="text" />
-            <label htmlFor="shop_name" id="shop_name_label">
-              Shop Name
-            </label>
-          </div>
 
-          <div className="input-field col-sm-6">
-            <input id="mphone_number" className="input-border" type="tel" />
-            <label htmlFor="mphone_number" id="mphone_number_label">
-              Shop Phone
-            </label>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
 
-class Insurance extends React.Component {
-  render() {
-    return (
-      <div>
-        <div>
-          <div className="row">
-            <div className="input-field col-sm-6">
-              <input id="company_name" className="input-border" type="text" />
-              <label htmlFor="company_name" id="company_name_label">
-                Company Name
-              </label>
-            </div>
 
-            <div className="input-field col-sm-6">
-              <input id="cphone_number" className="input-border" type="tel" />
-              <label htmlFor="cphone_number" id="cphone_number_label">
-                Company Phone
-              </label>
-            </div>
-          </div>
         </div>
+
       </div>
+
+      <AutoMechanicFooter/>
+      </div>
+
+
+
     );
   }
 }

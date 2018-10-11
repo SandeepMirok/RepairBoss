@@ -54,7 +54,7 @@ export default class PersonList extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Person Name:</label>
+          <label>Email:</label>
           <input type="text" name="name" onChange={this.handleChangeName} />
 
           <input

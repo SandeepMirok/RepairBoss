@@ -1,0 +1,100 @@
+.navbar {
+min-height: 80px;
+background-color: #1E90FF;
+}
+
+
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+
+
+}
+
+.repairBossLogo
+{
+  height: 70px;
+  width: 70px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  background-color: white;
+  border-radius: 8px;
+
+}
+
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after
+{
+	  content: '';
+    display: block;
+    width: 0;
+    margin-top: -5px;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+
+}
+
+.cool-link:hover::after
+{
+	width: 100%;
+}
+
+.dropdown-menu
+{
+    background-color:#FFA500;
+    border-bottom: 5px solid #1E90FF;
+    margin: 1.7rem 0 0;
+    border-radius: 0rem;
+}
+
+.navbar-dark .navbar-toggler {
+
+    border-color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+
+ .cool-link::after
+ {
+ 	display: none;
+ }
+
+ .dropdown-menu
+{
+    background-color:#FFA500;
+
+    margin: 0 0 3px;
+}
+
+.navbar-collapse > ul > li > a
+    {
+    border-top: 1px solid white;
+    }
+
+    .container
+	{
+	max-width: 950px;
+	}
+
+  .repairBossLogo
+  {
+    height: 50px;
+    width: 50px;
+  }
+
+}
